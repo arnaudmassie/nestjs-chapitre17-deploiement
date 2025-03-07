@@ -40,7 +40,7 @@ import { PaymentModule } from './payment/payment.module';
     // }),
     TypeOrmModule.forRoot(typeOrmModuleOptions),
     ConfigModule.forRoot({
-      envFilePath: './config/.env',
+      // envFilePath: './config/.env',
       isGlobal: true,
     }),
     CacheModule.register(),
