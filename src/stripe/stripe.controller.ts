@@ -11,7 +11,8 @@ export class StripeController {
   @Post('webhook')
   async handleIncomingEvents(
     @Headers('stripe-signature') signature: string,
-    @Req() req: RawBodyRequest<Request>,
+    // @Req() req: RawBodyRequest<Request>,
+    @Req() req: Buffer,
   ): Promise<boolean> {
     return this.stripeService.handleIncomingEvents(signature, req);
   }
